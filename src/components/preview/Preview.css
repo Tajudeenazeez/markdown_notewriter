@@ -1,0 +1,18 @@
+.container {
+    width: 49%;
+    height: 95vh;
+
+    
+}
+.title--preview {
+    width: 120px;
+    height: 22px;
+    color: #c1c4cb;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 11px;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 2px;
+    
+}

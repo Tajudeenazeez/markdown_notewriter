@@ -1,0 +1,21 @@
+.container {
+    width: 50%;
+    height: 95vh;    
+}
+.title--markdown {
+    width: 120px;
+    height: 22px;
+    color: #c1c4cb;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 11px;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 2px;
+}
+.scope--markdown {
+    min-width: 100%;
+    min-height: 100vh;
+    border: none;
+    outline: none;
+}

@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import Markdown from './components/markdown/Markdown';
+import Preview from './components/preview/Preview';
+import { ContextEditor } from './contexts/MarkdownContex';
+import Header from './components/header/Header';
 
-function App() {
+
+const App = () => {
+  const [markDown, setMarkDown] = useState('')
+  const contextValue = {
+    markDown,
+    setMarkDown
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className = "App">
+      <ContextEditor.Provider value={contextValue}>
+        <Header/>
+        <Markdown/>
+        <Preview/>
+      </ContextEditor.Provider>
     </div>
-  );
+  )
+
 }
 
 export default App;
