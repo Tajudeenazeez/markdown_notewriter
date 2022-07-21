@@ -10,6 +10,7 @@ type SliderProps = {
 const Slider = (props:SliderProps) => {
   return (
     <Menu>
+    
         <div className='menu-item'>MY DOCUMENTS</div>
         <button className='menu-item btn--orange'>&#43; New Document</button>
 
