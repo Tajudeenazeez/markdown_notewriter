@@ -1,0 +1,71 @@
+@import '../../styles/variables';
+@import '../../styles/mixin';
+
+.header {
+    width: 100%;
+    height: 15%;
+    position: fixed;
+    background-color: $secondary-dark;
+
+   &__burger {
+    margin-top: 3px;
+   }
+
+   &__wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+   }
+
+   &__title {
+    position: absolute;
+    top: 3%;
+    left: 5%;
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: $primary-white;
+    letter-spacing: 2px;
+   }
+   &__name {
+    min-height: 50%;
+    text-transform: capitalize;
+    position: absolute;
+    top: 3%;
+    left: 30%;
+    font-size: .4rem;
+    color: $primary-grey;
+    border-left: 1px solid $primary-grey;
+    padding: 8px;
+
+   }
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 5px;
+    margin: 5px;
+    background-color: $tertiary-grey;
+}
+
+
+.btn {
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    display: block;
+    width: 110px;
+    height: 20px;
+    color: $primary-white;
+    font-weight: 400;
+    text-transform: capitalize;
+    border-radius: 3px;
+
+   @include orangeBtn;
+
+   &--show {
+    visibility: hidden;
+    opacity: 0;
+   }
+}

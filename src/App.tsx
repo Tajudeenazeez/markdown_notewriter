@@ -1,26 +1,24 @@
-import React, {useState} from 'react';
-import './App.css';
-import Markdown from './components/markdown/Markdown';
-import Preview from './components/preview/Preview';
-import { ContextEditor } from './contexts/MarkdownContex';
+import React from 'react';
+import './App.scss';
 import Header from './components/header/Header';
+import InputArea from './components/markdown/InputArea';
+import OutputArea from './components/Preview/OutputArea';
+import Slider from './components/slider/Slider';
+import { ContextWrapper } from './context/contexts';
 
 
 const App = () => {
-  const [markDown, setMarkDown] = useState('')
-  const contextValue = {
-    markDown,
-    setMarkDown
-  }
-
+ const contextsidebar = React.useContext(ContextWrapper)
+  
+ const show = contextsidebar?.markdown.sidebar
 
   return (
-    <div className = "App">
-      <ContextEditor.Provider value={contextValue}>
-        <Header/>
-        <Markdown/>
-        <Preview/>
-      </ContextEditor.Provider>
+    <div className = {`App App--${show ? 'show' : ''}`}>
+      <Header/>
+      <Slider/>
+      <InputArea/>
+      <OutputArea/>
+ 
     </div>
   )
 

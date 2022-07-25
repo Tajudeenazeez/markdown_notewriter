@@ -1,0 +1,10 @@
+@mixin orangeBtn {
+    &--orange {
+        text-align: center;
+        font-size: .6rem;
+        line-height: .3rem;
+        background-color: $secondary-pink;
+        border: none;
+        outline: none;
+        }
+}

@@ -1,15 +1,32 @@
 import React from 'react'
-import './Header.css'
-import Slider from '../sidebar/Slider'
+import './Header.scss'
+import { ContextWrapper } from '../../context/contexts'
 
 
 const Header = () => {
+  const contextslider = React.useContext(ContextWrapper)
+  const show = contextslider?.markdown.sidebar
 
+
+  const changeSlider = () => {
+    contextslider?.dispatch({
+      type: "TOGGLESIDEBAR"
+    })
+  }
   return (
-    <div className="header--container" id='outer-container'>
-        <Slider pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
-        <div id='page-wrap'>  Markdown</div>
-        <button className='btn btn--save'><i className="material-icons"></i>save changes</button>
+    <div className="header">
+        <div  className="header__wrapper">
+            <div  onClick={changeSlider} className='header__burger'>
+            <div className="bar bar1"></div>
+            <div className="bar bar1"></div>
+            <div className="bar bar1"></div>
+            </div>
+            <h2 className='header__title'>markdown</h2>
+            <h3 className='header__name'>document name</h3>
+
+            <button className={`btn btn--orange btn--${show? "show":""}`}>save changes</button>
+
+        </div>
     </div>
   )
 }
