@@ -1,3 +1,4 @@
+@import '../src/styles/variables.scss';
 html, body {
   width: 100vw;
   height: 100vh;
@@ -16,6 +17,11 @@ html, body {
   &--show {
     transform: translateX(120px);
   }
+
+  &-body--darkmode {
+    background: $primary-dark;
+    color: #fff;
+  }
 }
 
 .app-body {
@@ -23,4 +29,11 @@ html, body {
   flex-wrap: wrap;
   height: 84%;
   width: 100%;
+  // margin-top: -15px;
+  border-top: 2px solid red;
+
+  // &--darkmode {
+  //   background-color: #000;
+  //   color: #fff;
+  // }
 }

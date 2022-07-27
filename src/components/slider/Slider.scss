@@ -116,6 +116,11 @@
             background-color: $primary-white;
             cursor: pointer;
           }
+          &--darkmode {
+            position: absolute;
+            bottom: 15%;
+            left: 15%;
+          }
 }
 
 
@@ -144,8 +149,3 @@
       }
     }
 
-.darkmode {
-    position: absolute;
-    bottom: 15%;
-    left: 15%;
-  }

@@ -19,7 +19,6 @@ export type ActionDarkmode = {
 }
 
 
-
 export const initialState:StateProps = {
     sidebar: false,
     markdownText: '',

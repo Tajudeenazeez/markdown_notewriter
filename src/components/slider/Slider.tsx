@@ -6,23 +6,27 @@ import { FiSun, FiMoon } from "react-icons/fi";
 const Slider = () => {
   const markdownContext = React.useContext(ContextWrapper);
   const show = markdownContext?.markdown.sidebar;
-  const [toggled, setToggled] = useState(false);
+  // const [toggled, setToggled] = useState(false);
 
-  // const toggled = markdownContext?.dispatch({
-  //   type: "SHOW DARKMODE"
-  // })
+  const toggled = markdownContext?.markdown.darkmode
+
+  const toggleDarkmode = () => {
+    markdownContext?.dispatch({
+      type: "SHOW DARKMODE"
+    })
+  }
 
 
-  useEffect(() => {
-    console.log('before toggle');
+  // useEffect(() => {
+  //   console.log('before toggle');
     
-    const toggleMode = document.querySelector(
-      ".sideBar--btn-round"
-    ) as HTMLElement;
-    toggleMode.classList.toggle("darkmode");
-    console.log('after toggle');
+  //   const toggleMode = document.querySelector(
+  //     ".sideBar--btn-round"
+  //   ) as HTMLElement;
+  //   toggleMode.classList.toggle("darkmode");
+  //   console.log('after toggle');
     
-  }, [toggled]);
+  // }, [toggled]);
 
   return (
     <div className={`sideBar sideBar${show ? "--show" : ""}`} >
@@ -30,9 +34,8 @@ const Slider = () => {
         <h2 className="sideBar--title">My Document</h2>
         <button className="btn btn--orange">+ New document</button>
         <div className="sideBar--mode">
-          <div
-            onClick={() => setToggled(!toggled)}
-            className={`sideBar--btn-round `}
+          <div onClick = {toggleDarkmode}
+            className = { `sideBar--btn-round sideBar--${ toggled ? "darkmode" : ''}` }
           ></div>
        
         </div>
