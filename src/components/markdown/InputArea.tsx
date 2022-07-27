@@ -14,7 +14,7 @@ const InputArea = () => {
 
   return (
     <div>
-        <div className='inputArea--wrapper'>
+        <div className='inputArea inputArea--wrapper'>
         <h2 className="inputArea--title">MarkDown</h2>
         <textarea onChange={ showMarkdown} className="inputArea--text"></textarea>
         </div>

@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <div className="header">
         <div  className="header__wrapper">
-            <div  onClick={changeSlider} className='header__burger'>
+            <div  onClick={changeSlider}>
             <div className="bar bar1"></div>
             <div className="bar bar1"></div>
             <div className="bar bar1"></div>

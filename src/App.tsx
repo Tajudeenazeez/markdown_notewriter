@@ -16,8 +16,10 @@ const App = () => {
     <div className = {`App App--${show ? 'show' : ''}`}>
       <Header/>
       <Slider/>
+      <div className="app-body">
       <InputArea/>
       <OutputArea/>
+      </div>
  
     </div>
   )
