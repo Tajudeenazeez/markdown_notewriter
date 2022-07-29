@@ -6,6 +6,7 @@
         // margin-top: 30px;
         width: 48vw;
         height: 100% ;
+        
 
     }
 
@@ -22,5 +23,18 @@
     padding: 2px 5px;
 
   }
+}
+
+
+.fullscreen {
+  width: 96vw;
+}
+
+.eye {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  font-size: 9px;
+  color: $secondary-grey;
 
 }

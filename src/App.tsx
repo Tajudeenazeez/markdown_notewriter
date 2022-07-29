@@ -5,7 +5,6 @@ import InputArea from './components/markdown/InputArea';
 import OutputArea from './components/Preview/OutputArea';
 import Slider from './components/slider/Slider';
 import { ContextWrapper } from './context/contexts';
-import { FiEyeOff, FiEye } from 'react-icons/fi'
 
 
 const App = () => {

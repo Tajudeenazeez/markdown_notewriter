@@ -5,6 +5,7 @@ export type StateProps = {
     markdownText: string
     previewText:string 
     darkmode: boolean
+    fiEye : boolean
 }
 
 export type ActionToggle = {
@@ -17,6 +18,9 @@ export type ActionMarkdown = {
 export type ActionDarkmode = {
     type: "SHOW DARKMODE",
 }
+export type ActionFiEye = {
+    type: "SHOW EYE"
+}
 
 
 export const initialState:StateProps = {
@@ -24,10 +28,11 @@ export const initialState:StateProps = {
     markdownText: '',
     previewText: '',
     darkmode: false,
+    fiEye: true
 
     
 }
-export type ActionType = ActionToggle | ActionMarkdown | ActionDarkmode 
+export type ActionType = ActionToggle | ActionMarkdown | ActionDarkmode | ActionFiEye
 
 export const reducer = (state:StateProps, action: ActionType) => {
     switch(action.type){
@@ -47,6 +52,11 @@ export const reducer = (state:StateProps, action: ActionType) => {
                     ...state,
                     darkmode: !state.darkmode
                 }
+                case "SHOW EYE":
+                    return {
+                        ...state,
+                        fiEye: !state.fiEye
+                    }
             default:
             return state
     }
