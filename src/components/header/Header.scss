@@ -66,3 +66,11 @@
     opacity: 0;
    }
 }
+
+.delete {
+    font-size: 1rem;
+    position: absolute;
+    right: 9rem;
+    top: 9px;
+    color: $secondary-grey;
+}
