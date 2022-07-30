@@ -1,6 +1,16 @@
-# Getting Started with Create React App
+# This is my markdown version written with typescript and react 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This markdown editor was created without the use of markdown library (react-markdown) 
+The use of regular expression was heavly used in the project implementation.
+
+## Technologies used in the project
+The adopted technologies were:
+> React
+> Typescript
+> SCSS
+
+# library
+> react-icons
 
 ## Available Scripts
 
