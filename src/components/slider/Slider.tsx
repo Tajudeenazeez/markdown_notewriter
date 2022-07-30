@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Slider.scss";
 import { ContextWrapper } from "../../context/contexts";
 import { FiSun, FiMoon } from "react-icons/fi";
@@ -32,7 +32,7 @@ const Slider = () => {
     <div className={`sideBar sideBar${show ? "--show" : ""}`} >
       <div className="sideBar--wrapper">
         <h2 className="sideBar--title">My Document</h2>
-        <button className="btn btn--orange">+ New document</button>
+        <button className="btn btn--orange btn--smallScreen">+ New document</button>
         <div className="sideBar--mode">
           <div onClick = {toggleDarkmode}
             className = { `sideBar--btn-round sideBar--${ toggled ? "darkmode" : ''}` }

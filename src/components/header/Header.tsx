@@ -26,7 +26,7 @@ const Header = () => {
             <h3 className='header__name'>document name</h3>
             <span className='delete'><RiDeleteBinLine/></span>
 
-            <button className={`btn btn--orange btn--${show? "show":""}`}>save changes</button>
+            <button className={`btn btn--orange btn--${show? "show":""}`}>save</button>
 
         </div>
     </div>
